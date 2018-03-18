@@ -1,0 +1,355 @@
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+html {
+	font-family: "ProximaNovaRegular";
+}
+button,
+input,
+textarea {
+	border: none;
+	outline: none;
+}
+.section_1 {
+	height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.section_1 .left {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	
+}
+header {
+	height: 87px;
+	background: #fff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+.section_1 .left .img_block {
+	flex-grow: 1;
+	background: url('../images/first-screen.jpg') no-repeat center #38a5db;
+	background-size: contain;
+}
+.section_1 .right {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 20px;
+	padding-left: 100px;
+	position: relative;
+	background: url('../images/clouds.png') no-repeat 100% 0%;
+}
+
+.section_1 .right .discription {
+	margin-bottom: 45px;
+}
+.section_1 .right  .discription p {
+	margin: 0;
+	background: #1d1d1d;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 27px;
+	max-width: max-content;
+	padding: 2px 15px;
+}
+.start_test {
+	height: 60px;
+	width: 450px;
+	font-size: 28px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: #38a5db;
+	border-bottom: 4px solid #226f95;
+	padding: 9px 20px;
+}
+.start_test:active {
+	border-color: transparent;
+	position: relative;
+	top: 4px;
+	transform: scale(0.99);
+}
+
+
+.section_2 {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: url('../images/rock.png') no-repeat calc(100% - 17px) 0px #fff;
+	display: none;
+    padding-right: 17px;
+
+	
+}
+.section_2 .rules {
+	min-height: 450px;
+	padding: 100px 0;
+	background: url('../images/clouds2.png') no-repeat center 0px;
+	position: relative;
+	overflow: hidden;
+}
+.section_2 .rules .plane {
+	display: block;
+	width: 519px;
+	height: 195px;
+	background: url('../images/plane.png') no-repeat center;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	transition: all 1s ease-in;
+}
+
+
+.section_2 .rules_description {
+	display: block;
+	min-height: 250px;
+	background: #fff;
+	border: 5px solid #c7e1f4;
+	padding: 50px 70px;
+	transform: scale(0.1);
+	opacity: 0;
+	position: relative;
+	z-index: 10;
+
+	transition: all .6s ease-in;
+
+}
+.section_2 .rules_description.open {
+	transform: scale(1);
+	opacity: 1;
+}
+								
+.section_2 .title,
+.section_2 .rules_description h1 {
+	font-size: 43px;
+	font-weight: bold;
+	color: #38a5db;
+	text-transform: uppercase;
+	margin: 20px 0;		
+}
+.section_2 .rules_description h1 {
+	margin-top: 0;
+}
+.section_2 .rules_description p {
+	font-size: 16px;
+	font-family: "ProximaNovaLight";
+	line-height: 26px;
+	color: #545454;
+}
+ul.char_list {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 60px;
+	list-style: none;
+}
+ul.char_list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+ul.char_list .char_name {
+	font-size: 26px;
+	line-height: 28px;
+	color: #242c32;
+}
+ul.char_list .dotted_line {
+	flex-grow: 1;
+	border-bottom: 2px dotted #50565b;
+	margin-left: 70px;
+	margin-right: 10px;
+}
+.custom_radio {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border: 5px solid #e8f3fc;
+	cursor: pointer;
+	padding: 4px;
+}
+.custom_radio::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.radio_block label {
+	font-weight: normal;
+	margin: 0 5px;
+	font-size: 20px;
+	color: #242c32;
+}
+.radio_block input {
+	display: none;
+}
+.radio_block input:checked + .custom_radio::before {
+	background: #38a5db;
+}
+
+.send_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 80px;
+}
+.send_block label {
+	font-size: 35px;
+	height: 42px;
+	color: #213037;
+	margin: 0;
+	font-weight: normal;
+}
+.send_block input {
+	height: 42px;
+	line-height: 42px;
+	padding: 0 30px;
+	border-bottom: 2px dotted #213037;
+	min-width: 300px;
+	margin: 0 100px;
+	flex-grow: 1;
+}
+.send_block button {
+	height: 42px;
+	font-size: 20px;
+	line-height: 40px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: #38a5db;
+	border-bottom: 4px solid #226f95;
+	padding: 0px 25px;
+	cursor: pointer;
+}
+.send_block button:active {
+	border-color: transparent;
+	position: relative;
+	top: 4px;
+	transform: scale(0.99);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+	.section_1 .right {
+		padding: 20px 50px;
+	}
+	.section_1 .right  .discription p {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.section_1 .right  .discription p {
+		font-size: 25px;
+	}
+	.send_block input {
+		margin: 0 20px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.section_1 .right  .discription p {
+		font-size: 20px;
+	}
+	.section_1 .left {
+		width: 40%;
+	}
+	.section_1 .right {
+		width: 60%;
+	}
+	.start_test {
+		width: auto;
+		max-width: 450px;
+	}
+	.start_test {
+		font-size: 23px;
+		width: 100%;
+		max-width: 100%;
+	}
+	.send_block,
+	.send_block button,
+	.send_block input,
+	.send_block label {
+		display: block;
+		
+	}
+	.send_block input {
+		margin: 0;
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.section_1 .right .discription p {
+		font-size: 17px;
+	}
+	.start_test {
+		font-size: 20px;
+	}
+	ul.char_list li,
+	.section_2 .title,
+	.send_block {
+		display: block;
+		text-align: center;
+	}
+	.send_block input,
+	.send_block button {
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 300px;
+	}
+	ul.char_list .dotted_line {
+		display: none;
+	}
+	ul.char_list .char_name {
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.section_1 {
+		flex-direction: column;
+	}
+	.section_1 .left,
+	.section_1 .right {
+		width: 100%;
+	}
+	.section_1 .right {
+		background-size: contain;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.section_1 .right {
+		padding: 10px 20px;
+	}
+	.section_1 .right .discription p {
+		font-size: 15px;
+	}
+	.start_test {
+		font-size: 17px;
+	}
+}
