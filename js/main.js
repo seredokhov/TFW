@@ -33,3 +33,59 @@ $(function(){
 	}
 
 })
+
+
+
+/* Активация кнопки */
+$(function(){
+	var input = $('#site-name'),
+		button = $('.send_block').find('button');
+		
+	input.on('input', function(){
+		var value = $(this).val();
+		if(value.length > 3) {
+			button.removeAttr('disabled');
+		} else {
+			button.attr('disabled', 'disabled');
+		}
+	})
+})
+
+
+/* Выпадающее меню в шапке */
+
+$(function(){
+	var link = $('.menu_btn'),
+		menu = $('.menu_list');
+
+	link.on('click', function(){
+		menu.slideToggle(200);
+		return false; 
+	})
+
+
+})
+
+/* Боковое меню */
+$(function(){
+	var link = $('.cat_btn'),
+		menu = $('.aside_nav');
+
+	link.on('click', function(){
+		menu.slideToggle(200);
+		return false; 
+	})
+})
+
+// Модальное окно
+$(function(){
+	var modal = $('.modal_results'),
+		overlay = $('.overlay'),
+		close = modal.find('.close');
+
+	close.on('click', function(){
+		modal.add(overlay).fadeOut(500);
+	})
+
+
+})
