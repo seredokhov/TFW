@@ -4,7 +4,7 @@ $(function(){
 		section = $('.section_2'),
 		body = $('body');
 
-	window.on('load', function(){
+	$(window).on('load', function(){
 		
 		link.on('click', function(){
 			body.css({
