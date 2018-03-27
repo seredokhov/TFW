@@ -42,12 +42,13 @@ $(function(){
 
 /* Активация кнопки */
 $(function(){
+	var re = /\.\w+/;
 	var input = $('#site-name'),
 		button = $('.send_block').find('button');
 		
 	input.on('input', function(){
 		var value = $(this).val();
-		if(value.length > 3) {
+		if(value.length > 3 && re.test(value)) {
 			button.removeAttr('disabled');
 		} else {
 			button.attr('disabled', 'disabled');
