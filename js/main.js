@@ -4,21 +4,25 @@ $(function(){
 		section = $('.section_2'),
 		body = $('body');
 
-	link.on('click', function(){
-		body.css({
-			'overflow' : 'hidden'
-		})
-		section.fadeIn(400, function(){
-			$(this).css({
-				'padding-right' : 0,
-				'background-position' : '100% 0px'
-			});
+	window.on('load', function(){
+		
+		link.on('click', function(){
 			body.css({
-				'overflow' : 'auto'
+				'overflow' : 'hidden'
+			})
+			section.fadeIn(400, function(){
+				$(this).css({
+					'padding-right' : 0,
+					'background-position' : '100% 0px'
+				});
+				body.css({
+					'overflow' : 'auto'
+				});
+				fly();
 			});
-			fly();
 		});
-	});
+
+	})
 
 	function fly(){
 		var plane = $('#plane'),
