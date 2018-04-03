@@ -42,7 +42,7 @@ $(function(){
 
 /* Активация кнопки */
 $(function(){
-	var re = /^[a-zа-яё]+\.{1}[a-zа-яё]{2,}$/i;
+	var re = /^[a-zа-яё]+\-{0,1}[a-zа-яё]+\.{1}[a-zа-яё]{2,}$/i;
 	var input = $('#site-name'),
 		button = $('.send_block').find('button');
 		
