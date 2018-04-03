@@ -42,7 +42,7 @@ $(function(){
 
 /* Активация кнопки */
 $(function(){
-	var re = /\.\w+/;
+	var re = /\.[a-zа-яё]{2,}$/;
 	var input = $('#site-name'),
 		button = $('.send_block').find('button');
 		

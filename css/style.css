@@ -94,14 +94,14 @@ textarea {
 .section_1 .right .discription {
 	margin-bottom: 45px;
 }
-.section_1 .right  .discription p {
+.section_1 .right .discription p {
 	margin: 0;
 	background: #1d1d1d;
 	text-transform: uppercase;
 	color: #fff;
 	font-size: 27px;
-	max-width: max-content;
 	padding: 2px 15px;
+	line-height: 40px;
 }
 .start_test {
 	height: 60px;
@@ -120,7 +120,9 @@ textarea {
 	top: 4px;
 	transform: scale(0.99);
 }
-
+.start_test:hover {
+	background-color: #1793b9;
+}
 
 .section_2 {
 	position: absolute;
@@ -148,7 +150,7 @@ textarea {
 	bottom: 50%;
 	left: 50%;
 	transform: translate(-50%, 50%);
-	transition: all 1s ease-in;
+	transition: all 2s ease-in;
 }
 
 
@@ -514,10 +516,13 @@ a.logo {
 	padding: 25px;
 	background: #fff;
 	margin-bottom: 40px;
-	transition: all .4s linear;
+	transition: all .2s linear;
 }
 .new:hover {
 	border-color: #38a5db;
+}
+.new a {
+	color: #38a5db;
 }
 .new h2 {
 	font-size: 36px;
@@ -557,6 +562,9 @@ a.logo {
 	font-size: 21px;
 	line-height: 20px;
 	font-family: "ProximaNovaLight";
+}
+.new a.read_more:hover {
+	color: #1793b9;
 }
 
 .pagination_block {
@@ -875,6 +883,7 @@ a.logo {
 	}
 	.section_1 .right  .discription p {
 		font-size: 20px;
+		line-height: 1.4;
 	}
 	.section_1 .left {
 		width: 40%;
